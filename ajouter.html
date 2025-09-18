@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajouter une annonce — Occaz+</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <strong class="brand-name">Occaz+</strong>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+      <a href="ajouter.html">Ajouter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<section class="container">
+  <h1>Ajouter une annonce</h1>
+  <p class="small">Cette page enregistre vos annonces <strong>en local</strong> (sur cet appareil) et les affiche ensuite dans la liste. Pas de base de données ni de paiement.</p>
+
+  <form id="form-ajout" class="grid" style="grid-template-columns:1fr 1fr">
+    <div class="field"><label class="small">Titre</label><input name="titre" required placeholder="ex: iPhone 12, VTT Rockrider…"></div>
+    <div class="field"><label class="small">Prix (€)</label><input name="prix" type="number" min="0" step="1" required></div>
+    <div class="field"><label class="small">Ville</label><input id="ville" name="ville" placeholder="Votre ville"></div>
+    <div class="field"><label class="small">Catégorie</label>
+      <select name="categorie" required>
+        <option>High-Tech</option><option>Maison</option><option>Sport</option><option>Enfant</option><option>Bricolage</option><option>Auto</option>
+      </select>
+    </div>
+    <div class="field"><label class="small">État</label>
+      <select name="etat" required>
+        <option>Très bon état</option><option>Bon état</option><option>Correct</option>
+      </select>
+    </div>
+    <div class="field"><label class="small">Image (URL)</label><input name="image" placeholder="https://... (optionnel)"></div>
+    <div style="grid-column:1/-1"><button class="btn" type="submit">Ajouter l’annonce</button></div>
+  </form>
+
+  <h2>Mes annonces (localStorage)</h2>
+  <div id="mes-annonces" class="grid"></div>
+</section>
+
+<footer class="footer small">
+  © <span id="year"></span> <span class="brand-name">Occaz+</span> — Site de petites annonces d’occasion. <br>
+  Astuce sécurité : rencontrez-vous dans un lieu public et vérifiez le produit avant paiement.
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

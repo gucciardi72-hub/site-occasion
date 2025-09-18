@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil — Occaz+</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <strong class="brand-name">Occaz+</strong>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+      <a href="ajouter.html">Ajouter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <h1>Vendez et achetez malin 👋</h1>
+    <p>Un mini site de petites annonces d’occasion. Simple, rapide, sans paiement en ligne. Ajoutez vos annonces et partagez le lien !</p>
+    <div class="cta">
+      <a class="btn" href="annonces.html">Voir les annonces</a>
+      <a class="btn ghost" href="ajouter.html">Ajouter une annonce</a>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="small">Annonces en ligne</div><div class="n" id="k-total">—</div></div>
+      <div class="kpi"><div class="small">Prix moyen</div><div class="n" id="k-moy">—</div></div>
+      <div class="kpi"><div class="small">Moins cher</div><div class="n" id="k-min">—</div></div>
+      <div class="kpi"><div class="small">Plus cher</div><div class="n" id="k-max">—</div></div>
+    </div>
+    <div class="small">Mois courant : <strong id="mois"></strong></div>
+  </div>
+</section>
+<section class="container">
+  <header>
+    <h2>Dernières annonces</h2>
+    <p class="small">Triées par date la plus récente.</p>
+  </header>
+  <div id="cards" class="grid"></div>
+</section>
+
+<footer class="footer small">
+  © <span id="year"></span> <span class="brand-name">Occaz+</span> — Site de petites annonces d’occasion. <br>
+  Astuce sécurité : rencontrez-vous dans un lieu public et vérifiez le produit avant paiement.
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

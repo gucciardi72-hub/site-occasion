@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annonces — Occaz+</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <strong class="brand-name">Occaz+</strong>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+      <a href="ajouter.html">Ajouter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<section class="container">
+  <header>
+    <h1>Annonces d’occasion</h1>
+    <p class="small">Filtrez par mot-clé, catégorie et prix.</p>
+  </header>
+
+  <div class="filters">
+    <div class="field">
+      <label for="f-q" class="small">Recherche</label>
+      <input id="f-q" type="search" placeholder="ex: vélo, iPhone, canapé…">
+    </div>
+    <div class="field">
+      <label for="f-categorie" class="small">Catégorie</label>
+      <select id="f-categorie">
+        <option value="">Toutes</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-min" class="small">Prix min (€)</label>
+      <input id="f-min" type="number" min="0" step="10" placeholder="0">
+    </div>
+    <div class="field">
+      <label for="f-max" class="small">Prix max (€)</label>
+      <input id="f-max" type="number" min="0" step="10" placeholder="1000">
+    </div>
+  </div>
+
+  <div id="cards" class="grid"></div>
+</section>
+
+<footer class="footer small">
+  © <span id="year"></span> <span class="brand-name">Occaz+</span> — Site de petites annonces d’occasion. <br>
+  Astuce sécurité : rencontrez-vous dans un lieu public et vérifiez le produit avant paiement.
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

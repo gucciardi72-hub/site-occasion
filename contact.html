@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Occaz+</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <strong class="brand-name">Occaz+</strong>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="annonces.html">Annonces</a>
+      <a href="ajouter.html">Ajouter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<section class="container">
+  <h1>Contact</h1>
+  <p>Pour publier vos annonces sur la version publique (si vous hébergez le site), écrivez-nous.</p>
+  <p><a class="btn mailto" href="mailto:contact@exemple.fr">Envoyer un email</a></p>
+  <h2>FAQ</h2>
+  <table>
+    <tr><th>Question</th><th>Réponse</th></tr>
+    <tr><td>Prise de rendez-vous</td><td>Privilégiez un lieu public et venez accompagné si possible.</td></tr>
+    <tr><td>Paiement</td><td>Espèces ou virement instantané après vérification du produit. Pas de paiement en ligne.</td></tr>
+    <tr><td>Retours</td><td>Transactions entre particuliers, pas de garantie. Discutez avant l’achat.</td></tr>
+  </table>
+</section>
+
+<footer class="footer small">
+  © <span id="year"></span> <span class="brand-name">Occaz+</span> — Site de petites annonces d’occasion. <br>
+  Astuce sécurité : rencontrez-vous dans un lieu public et vérifiez le produit avant paiement.
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
